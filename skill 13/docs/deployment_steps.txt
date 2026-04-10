@@ -1,0 +1,15 @@
+STEP 1: Build React
+npm install
+npm run build
+
+STEP 2: Build Spring Boot
+mvn clean package
+
+STEP 3: Run Backend
+java -jar target/backend.jar
+
+STEP 4: Copy React build to backend:
+backend/src/main/resources/static/
+
+STEP 5: Run application
+http://localhost:8080

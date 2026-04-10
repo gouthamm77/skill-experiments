@@ -1,0 +1,19 @@
+import React,{useState} from "react";
+import LocalUserList from "./LocalUserList";
+import UserList from "./UserList";
+import FakePostList from "./FakePostList";
+
+export default function Dashboard(){
+const [page,setPage]=useState("");
+return(
+<div>
+<h2>Dashboard</h2>
+<button onClick={()=>setPage("local")}>Local Users</button>
+<button onClick={()=>setPage("api")}>Users API</button>
+<button onClick={()=>setPage("fake")}>Fake API</button>
+{page==="local" && <LocalUserList/>}
+{page==="api" && <UserList/>}
+{page==="fake" && <FakePostList/>}
+</div>
+);
+}
